@@ -1,14 +1,10 @@
 const path = require('path');
-const pkg = require('./package.json');
-
-const libraryName= pkg.name;
 
 module.exports = (env, argv) => ({
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
-    library: libraryName,
     libraryTarget: 'commonjs2',
     publicPath: '/build/',
   },
